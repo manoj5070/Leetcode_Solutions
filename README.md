@@ -5,6 +5,7 @@
 |  |
 | ------- |
 | [0175-combine-two-tables](https://github.com/manoj5070/Leetcode_Solutions/tree/master/0175-combine-two-tables) |
+| [0180-consecutive-numbers](https://github.com/manoj5070/Leetcode_Solutions/tree/master/0180-consecutive-numbers) |
 | [0183-customers-who-never-order](https://github.com/manoj5070/Leetcode_Solutions/tree/master/0183-customers-who-never-order) |
 ## String
 |  |
