@@ -5,8 +5,8 @@ class Solution {
         for(int i=0;i<n;i++){
             if(nums[i]==key){
                 int j=i-k;
-                while(j<=i+k && j<n ){
-                    while(j<0) j++;
+                while(j<0) j++;
+                while(j<n && j<=i+k){
                     set.add(j);
                     j++;
                 }
