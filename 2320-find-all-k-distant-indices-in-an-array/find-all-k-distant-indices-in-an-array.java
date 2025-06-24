@@ -12,7 +12,6 @@ class Solution {
                 }
             }
         }
-        System.out.print(set);
         List<Integer> ls=new ArrayList<>();
         for(int num:set){
             ls.add(num);
