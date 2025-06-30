@@ -12,7 +12,7 @@ class Solution {
             j=n-1;
         }else if(nums[j]-nums[i]>1) j--;
         else if(nums[j]==nums[i]){
-            i++;
+            i=j;
             j=n-1;
         }
         if(j==i){
