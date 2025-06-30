@@ -6,7 +6,6 @@ class Solution {
      for(int i=0;i<n;i++){
         map.put(nums[i],map.getOrDefault(nums[i],0)+1);
      }
-     System.out.print(map);
      for(int i=0;i<n;i++){
         int min=map.get(nums[i]);
         if(map.get(nums[i]+1)==null) continue;
