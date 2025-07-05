@@ -5,10 +5,9 @@ class Solution {
             ans[arr[i]]++;
         }
         int temp=-1;
-        System.out.print(Arrays.toString(ans));
-        for(int i=1;i<ans.length;i++){
-            if(ans[i]==i) temp=i;
+        for(int i=500;i>=1;i--){
+            if(ans[i]==i) return temp=i;
         }
-        return temp;
+        return -1;
     }
 }
