@@ -5,9 +5,9 @@ class Solution {
             ans[arr[i]]++;
         }
         int temp=-1;
-        for(int i=500;i>=1;i--){
-            if(ans[i]==i) return temp=i;
+        for(int i=1;i<ans.length;i++){
+            if(ans[i]==i)  temp=i;
         }
-        return -1;
+        return temp;
     }
 }
