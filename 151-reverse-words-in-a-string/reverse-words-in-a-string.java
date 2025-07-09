@@ -5,22 +5,18 @@ class Solution {
         int j=0;
         int i=j;
         while(j<sb.length()){
-            if(sb.charAt(j)==' '){
+            j=i;
+            while(j<sb.length() && sb.charAt(j)!=' ') j++;
                 st.push(sb.substring(i,j));
-                while(sb.charAt(j)==' ') j++;
+             while(j<sb.length() && sb.charAt(j)==' ') j++;
                 i=j;
-            }else j++;
-
-            if(j==sb.length()){
-                st.push(sb.substring(i,j));
-            }
         }
 
         StringBuilder sb1=new StringBuilder();
         while(!st.isEmpty()){
             sb1.append(st.pop());
-            sb1.append(' ');
+            if(!st.isEmpty()) sb1.append(' ');
         }
-       return sb1.toString().trim();
+       return sb1.toString();
     }
 }
