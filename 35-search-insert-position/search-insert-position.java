@@ -3,10 +3,10 @@ class Solution {
         int i=0;
         int j=nums.length-1;
         while(i<=j){
-             if(nums[j]==target) return j;
-             if(nums[i]==target) return i;
-            if(nums[j]>target) j--;
-            else if(nums[i]<target) i++;
+            int mid=i+(j-i)/2;
+             if(nums[mid]==target) return mid;
+            else if(nums[mid]>target) j--;
+            else i++;
         }
         return i;
     }
