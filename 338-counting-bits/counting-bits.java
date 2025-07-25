@@ -5,9 +5,8 @@ class Solution {
             int c=0;
             int temp=i;
             while(temp>1){
-                int rem=temp%2;
-                if(rem==1) c++;
-                temp/=2;
+                if((temp&1)==1) c++;
+                temp>>=1;
             }
             arr[i]=c+1;
         }
