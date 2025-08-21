@@ -10,5 +10,5 @@ class Solution(object):
              return True
         if(n%2!=0):
             return False
-        return self.isPowerOfTwo(n/2)
+        return self.isPowerOfTwo(n//2)
         
