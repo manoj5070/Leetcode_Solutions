@@ -4,11 +4,18 @@ class Solution:
             return x
 
         a=1
-        while((a*a)<x):
-            a+=1
+        left=1
+        right=x//2
+
+        while left<=right:
+            mid= (right-left)//2+left
+            square=mid*mid
+            if((square)==x):
+                return mid
+            elif square<x:
+                left=mid+1
+            else:
+                right=mid-1
         
-        if((a*a)==x):
-            return a
-        else:
-            return a-1
+        return right
         
