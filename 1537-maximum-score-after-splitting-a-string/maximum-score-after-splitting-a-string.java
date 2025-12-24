@@ -9,7 +9,7 @@ class Solution {
        }
     //    System.out.print(oneSum);
     //    System.out.print(zeroSum);
-       if(zeroSum==0 || oneSum==0) return n-1;
+    //    if(zeroSum==0 || oneSum==0) return n-1;
        int one=0;
        int zero=0;
        int max=-1;
