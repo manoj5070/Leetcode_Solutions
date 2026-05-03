@@ -3,16 +3,8 @@ class Solution {
         int n=s.length();
         int m=goal.length();
         if(m!=n) return false;
+        s=s+s;
         if(s.contains(goal)) return true;
-        int j=1;
-        while(j<=m){
-            StringBuilder sb=new StringBuilder();
-            for(int i=j;i<j+m;i++){
-                sb.append(goal.charAt(i%m));
-            }
-            if(s.contains(sb.toString())) return true;
-            j++;
-        }
         return false;
     }
 }
