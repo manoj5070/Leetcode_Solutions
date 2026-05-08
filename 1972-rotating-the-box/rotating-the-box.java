@@ -12,20 +12,15 @@ class Solution {
             reverse(ans[i]);
         }
         for(int j=0;j<m;j++){
+            int stone=n-1;
             for(int i=n-1;i>=0;i--){
-                if(ans[i][j]=='.'){
-                    int stone=-1;
-                    for(int k=i-1;k>=0;k--){
-                        if(ans[k][j]=='*') break;
-                        else if(ans[k][j]=='#'){
-                            stone=k;
-                            break;
-                        }
-                    }
-                    if(stone!=-1){
-                        ans[i][j]='#';
-                        ans[stone][j]='.';
-                    }
+                if(ans[i][j]=='*'){
+                   stone=i-1;
+                }
+                else if(ans[i][j]=='#'){
+                    ans[i][j]='.';
+                    ans[stone][j]='#';
+                    stone--;
                 }
             }
         }
