@@ -1,12 +1,14 @@
 class Solution {
     public boolean isGood(int[] nums) {
         int n=nums.length;
-        int maxElement=-1;
-        Arrays.sort(nums);
-        if(nums[n-1]!=n-1 || n<nums[n-1]+1) return false;
-        for(int i=0;i<n-
-        1;i++){
-            if(i+1!=nums[i]) return false;
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            if(nums[i]>n-1) return false;
+            if(arr[nums[i]]>0 && nums[i]<n-1) return false;
+            if (nums[i] == n - 1 && arr[nums[i]] > 1) {
+                return false;
+            }
+            arr[nums[i]]++;
         }
         return true;
     }
