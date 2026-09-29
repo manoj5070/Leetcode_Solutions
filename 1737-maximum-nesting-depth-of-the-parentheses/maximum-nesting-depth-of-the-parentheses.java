@@ -4,9 +4,13 @@ class Solution {
         int max=0;
         for(char c:s.toCharArray()){
             if(c=='('){
-                st.push('(');
+                st.add('(');
+               max=Math.max(max,st.size());
+            } 
+            else if(c==')'){
                 max=Math.max(max,st.size());
-            }else if(!st.isEmpty() && c==')') st.pop();
+                st.pop();
+            } 
         }
         return max;
     }
